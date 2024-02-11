@@ -6,7 +6,7 @@ services:
     image: nginx:1.16.0-alpine
     # On rend le service accessible sur le port 8082 de votre machine
     ports:
-      - 8082:80
+      - 8085:80
 
     # Le volume bindé au dessier 'front' permet de modifier le code de 'front' et que ce soit pris en compte immédiatement, pour vous faciliter la vie
     volumes:
@@ -18,7 +18,7 @@ services:
     image: php:8-apache
     # On bind le port 8081 de la machine avec le 80 du conteneur pour pouvoir tester et acceder à l'API
     ports:
-      - 8081:80
+      - 8084:80
     # Le code est contenu dans le dossier 'api' et est pris en compte quand on le modifie, comme pour le front.
     volumes:
       - ./api:/var/www/html/
