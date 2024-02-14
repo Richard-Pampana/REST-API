@@ -22,6 +22,7 @@ app.get('/', (req, res, next) => {
 
 app.use('/users', require('./routes/users'));
 app.use('/apartments', require('./routes/apartments'));
+app.use('/reservations', require('./routes/reservations'));
 
 app.use((error, req, res, next) => {
     console.log(error);
